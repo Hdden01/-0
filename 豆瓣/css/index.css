@@ -1,0 +1,701 @@
+@import "reset.css";
+@import "common.css";
+@import "https://at.alicdn.com/t/font_1994372_ueb11mw7x4.css";
+/* 统一样式 */
+button{
+    cursor: pointer;
+}
+body{
+    line-height: 2;
+}
+/* 统一样式结束 */
+/* 页头开始 */
+.header{
+    height: 90px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+/* .header .menu,.header .search{
+    height: 30px;
+    border: 2px solid black;
+} */
+.header .logo a{
+    width: 154px;
+    /* height: 30px; */
+    /* 隐藏内容方法2 */
+    height:0;
+    padding-top: 30px;
+    overflow: hidden;
+    display: block;
+    background:url(../img/logo_db.png) no-repeat left top/100%;
+}
+  /* 隐藏内容方法1 */
+/* .header .logo span{
+  
+    display: none;
+} */
+/* .header .conteiner{
+   margin-top: 30px;
+} */
+.header .search{
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+    margin-left: 20px;
+    position: relative;
+}
+.header .search .text{
+width: 240px;
+height: 20px;
+font-size: 13px;
+padding: 5px;
+}
+.header .search .text::placeholder{
+    color: #ccc;
+}
+.header .search button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    color: #c3c3c3;
+}
+.header .menu{
+    margin-top: 6px;
+}
+.header .menu a{
+    padding-top: 20px;
+    overflow: hidden;
+    display: inline-block;
+    width: 40px;
+    height:0;
+    /* margin-left:17px; */
+    margin-left: 18px;
+    background: url(../img/nav_logo.png) no-repeat left top/463px 20px;
+}
+.header .menu .menu-movie{
+    background-position: -60px 0;
+}
+.header .menu .menu-music{
+    background-position: -120px 0;
+}
+.header .menu .menu-group{
+    background-position: -180px 0;
+}
+.header .menu .menu-fm{
+    background-position: -240px 0;
+}
+.header .menu .menu-city{
+    background-position: -300px 0;
+}
+.header .menu .menu-time{
+    background-position: -360px 0;
+}
+.header .menu .menu-doupin{
+    background-position: -422px 0;
+}
+/* 页头结束 */
+/* 横幅开始 */
+
+.banner{
+    /* 背景图必须设置高 */
+    height: 304px;
+    background: url(../img/banner-bg.jpg) no-repeat left top/auto 100%;
+    background-color: #edf4ed;
+}
+/* 嵌入网页 */
+.banner .container .loginarea{
+    width: 300px;
+    height: 300px;
+}
+.banner .container .slogan{
+    margin-top: 92px;
+    margin-right: 32px;
+}
+.banner .container .slogan .title{
+    font-size: 25px;
+    color: #111;
+}
+.banner .container .slogan .download {
+    margin-top: 30px;
+}
+.banner .container .slogan .download .btn{
+width: 115px;
+height: 30px;
+display: inline-block;
+line-height: 30px;
+font-size: 12px;
+border-radius: 2px;
+}
+.banner .container .slogan .download .btn a:hover{
+    background: transparent;
+}
+/* 小二维码 */
+.banner .container .slogan .download .img{
+    position: relative;
+    display:inline-block;
+}
+/* 二维码图片 */
+.banner .container .slogan .download .img .img-text {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+   
+}
+/* 当鼠标当道二维码上时找到小二维码下的隐藏大二维码 */
+.banner .container .slogan .download .img:hover>.qrcode-img{
+    display: block;
+}
+/* 大二维码 */
+.banner .container .slogan .download .qrcode-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background:#fff;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+/* 大二维码里面的文本 */
+.banner .container .slogan .download .qrcode-img p{
+    font-size: 13px;
+}
+
+/* 横幅结束 */
+/* 热点开始 */
+
+/* 因为下面有相似的样式所以不加 */
+.hot-area .hot-list{
+line-height: 1.5;
+}
+.hot-area .hot-list li {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.hot-area .hot-list li a{
+    font-size:14px;
+    margin-bottom: 6px;
+}
+.hot-mian .float-left{
+    width: 350px;
+}
+.hot-mian ul{
+    /* 两侧对齐适应宽度   不会改变最后一行 */
+    text-align: justify;
+    line-height: 1.5;
+}
+.hot-mian .float-left ul::after{
+    display: inline-block;
+    content: "";
+}
+.hot-mian .float-left li{
+    display: inline-block;
+    width: 170px;
+    font-size: 12px;
+    /* 解决文字过多顶部不对齐 默认基线位置对齐 */
+    vertical-align: top;
+}
+.hot-mian .float-left li .img img{
+    /* div下的图片宽度撑满 */
+    width: 100%;
+    /* 解决白边问题 */
+    display: block;
+}
+.hot-mian .float-right{
+    width: 275px;
+    font-size: 12px;
+}
+.hot-mian .float-right li{
+    margin-bottom: 12px;
+}
+.hot-mian .float-right .title{
+   color:#999;
+}
+.hot-mian .float-right .desc{
+color: #666;
+}
+
+/* 热点结束 */
+
+/* 豆瓣时间开始 */
+.time-area .time-mian li{
+    display: inline-block;
+    width: 100px;
+    margin-right: 60px;
+    line-height: 1.38;
+    font-size: 13px;
+    text-align: center;
+}
+.time-area .time-mian li .img img{
+    /* div下的图片宽度撑满  前提时外面高度固定 */
+    width: 100%;
+}
+/*公共样式后面电影部分可以使用 */
+li .words a{
+    display:inline-block;
+color: #333333;
+/* 设置最大宽度超过就隐藏 */
+max-width: 100%;
+/* 不换行 */
+white-space: nowrap;
+overflow: hidden;
+text-overflow:ellipsis;
+
+
+}
+ li .words a:hover{
+    color: #fff;
+}
+.time-area .time-mian li .words span{
+    display: block;
+    font-size: 12px;
+    color: #999999;
+   
+}
+/* 豆瓣时间结束 */
+/* 电影开始 */
+/* 公共样式 电影左侧 0 */
+ .left-menu{
+    font-size: 14px;
+}
+.left-menu .menu-new{
+    position: relative;
+}
+/* new小图标 */
+.left-menu .menu-new::after{
+   content: "";
+   background: url(../img/new_menu.gif);
+   width: 17px;
+   height: 7px;
+   position: absolute;
+top: 0;
+}
+/* 公共样式 电影左侧 1 */
+.move-area .right-menu-list-top li{
+float: left;
+/* 此处还可以设置固定宽高 */
+width: 48px;
+height: 24px;
+font-size: 12px;
+ /* 但是当内容太多容易出现问题 需要设置 */
+ overflow:hidden;
+/* 当内容不一样时会剂动后面内容
+margin-right:29px;
+font-size: 12px; */
+}
+.move-area .right-menu-list-bottom {
+    font-size: 12px;
+}
+.move-area .right-menu-list-bottom li{
+    list-style-type: decimal;
+    list-style-position: inside;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 6px;
+    /* padding-left: 5px; */
+}
+.move-area .right-menu-list-bottom li a{
+    margin-left: 5px;
+}
+/* 电影选票区域 */
+.move-area .move-list li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right:30px;
+    font-size: 13px;
+    line-height: 1.25;
+}
+.move-area .move-list li:nth-child(4n){
+    margin-right: 0;
+}
+/* div下的盒子宽度撑满  前提是外面盒子设置宽度 */
+.move-area .move-list li .img img{
+    width: 100%;
+}
+
+/* 电影 */
+/* 小组开始 */
+
+.group-area .group-left .title .color{
+    color:#007982;
+}
+.group-area .group-left .title .color:hover{
+    color: #fff;
+}
+.group-area .group-left .group-left-menu li a{
+    color:#007982;
+}
+.group-area .group-left .group-left-menu li a:hover{
+    color: #fff;
+}
+.group-area .group-right .group-right-menu .group-name a{
+    color: #333;
+    font-size: 14px;
+}
+.group-area .group-right .group-right-menu .group-name a:hover{
+    color: #fff;
+}
+.group-area .group-right .group-right-menu .group-name a::after{
+    content: ">>";
+}
+.group-area .group-right .group-right-menu ul{
+    line-height: 1.5;
+}
+.group-area .group-right .group-right-menu ul li{
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 7px;
+}
+.group-area .group-right .group-right-menu ul li a{
+    color: #017a85;
+}
+.group-area .group-right .group-right-menu ul li a:hover{
+    color: #fff;
+}
+.group-center .group-list{
+    text-align: justify;
+}
+/* 解决最后一行无效问题 */
+.group-center .group-list::after{
+    display: inline-block;
+    content: "";
+    width: 100%;
+}
+.group-center .group-list li{
+width: 248px;
+font-size: 13px;
+margin-bottom: 30px;
+display: inline-block;
+
+}
+.group-center .group-list li .img{
+   float: left;
+   margin-right:15px;
+   width: 48px;
+}
+/*  words 常规流盒子排列会忽略浮动盒子(此时常规流盒子压在浮动盒子下)  
+所以设置浮动盒子的右外边距
+行盒在排列的时候会避开浮动盒子  形成文字环绕
+*/
+.group-center .group-list li .words a{
+    white-space:normal;
+    display: inline;
+    color: #017a85;
+}
+.group-center .group-list li .words a:hover{
+    color: #fff;
+}
+.group-center .group-list li .words span{
+    display: block;
+    font-size: 12px;
+color: #999;
+}
+.group-center .group-list li .img img{
+    width: 100%;
+}
+/* 小组结束 */
+/* 读书开始 */
+.read-area .read-left ul li a{
+    color: #614e3c;
+}
+.read-area .read-left ul li a:hover{
+    color: #fff;
+}
+/* 图片 */
+.app-icon{
+    display: block;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/app_icons.jpg)no-repeat;
+    background-position: 0 0;
+    /*盒子阴影 offset-x offset-y 模糊程度(不可取负值) 阴影大小 颜色 */
+    /* inset表示内阴影 */
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 5px;
+}
+.read-area .read-left ul li a~.read-text{
+    font-size: 12px;
+}
+.read-area .read-right .read-list ul{
+    border-top:1px solid #eaeaea;
+    font-size: 12px;
+    /* padding: 6px 0; */
+    margin-bottom: 10px;
+    padding-top: 4px;
+    line-height: 1.62;
+}
+.read-area .read-right .read-list ul .read-list-text{
+color: #999;
+}
+.read-area .read-right .read-list li{
+display: inline-block;
+margin-left: 10px;
+margin-bottom: 2px;
+}
+.read-area .read-right .read-list li a{
+    color: #614e3c;
+}
+.read-area .read-right .read-list li a:hover{
+    color: #fff;
+}
+.read-area .read-center ul li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right: 30px;
+    line-height: 1.25;
+    font-size: 13px;
+
+}
+.read-area .read-center ul li:nth-child(4n){
+    margin-right: 0;
+}
+.read-area .read-center ul li .img img{
+    width: 100%;
+}
+/* 读书结束 */
+/* 音乐开始 */
+.music-area .music-left .title a{
+   color: #f38c00;
+}
+.music-area .music-left .title a:hover{
+    color: #fff;
+}
+/* 音乐分类列表颜色 */
+.music-area .music-left-list ul li a{
+    color: #555d53;
+}
+.music-area .music-left-list ul li a:hover{
+    color: #fff;
+}
+.music-area .music-left-list .app-icon{
+    background-position: -50px 0;
+}
+.music-area .music-left-list .app-icon.app-icon1{
+    background-position: -300px 0;
+}
+/* 右侧列表 */
+.music-area .music-right .music-right-list ul{
+    font-size: 12px;
+}
+.music-area .music-right .music-right-list ul li{
+    margin-bottom: 8px;
+}
+.music-area .music-right .music-right-list ul li::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.music-area .music-right .music-right-list ul li .number{
+    /* display: inline-block;若使用行块盒需要添加vertical-align: top; */
+ float: left;
+ margin-right: 10px;
+}
+.music-area .music-right .music-right-list ul li .img{
+   float: left;
+   margin-right: 10px;
+   position: relative;
+   height:48px;
+}
+.music-area .music-right .music-right-list ul li .img::before{
+    display: block;
+    position: absolute;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 48px;
+    background:rgba(0, 0, 0, .8);
+}
+.music-area .music-right .music-right-list ul li .words{
+    display: inline-block;
+    line-height: 1.25;
+}
+.music-area .music-right .music-right-list ul li .words span{
+    display:block;
+    color: #999;
+    margin-top: 6px;
+
+}
+/* 主区域 */
+.music-center .music-top-list ul li{
+    width: 100px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 30px;
+}
+.music-center .music-top-list ul li .img img{
+    width: 100%;
+}
+/* 音乐结束 */
+/* 豆品开始 */
+.bean-area .bean-left .title a{
+    color: #1f9432;
+}
+.bean-area .bean-left .title a:hover{
+    color: #fff;
+}
+.bean-area .aside-right .bean-img img{
+    width: 100%;
+    /* 解决白边 */
+    display: block;
+}
+.bean-area .aside-right .bean-img  p{
+    font-size: 14px;
+}
+.bean-area .aside-right  .bean-right-list{
+    font-size: 14px;
+}
+.bean-area .aside-right  .bean-right-list li::after{
+display: block;
+content: "";
+clear: both;
+}
+.bean-area .aside-right  .bean-right-list li span{
+    font-size: 12px;
+    color: #6A6A6A;
+}
+.bean-area .bean-center ul li{
+    width: 240px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.bean-area .bean-center ul li .img {
+    position: relative;
+}
+.bean-area .bean-center ul li:hover .img::after{
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.bean-area .bean-center ul li .img img{
+    width: 100%;
+    display:block;
+}
+.bean-area .bean-center ul li .text a{
+  float: left;
+}
+.bean-area .bean-center ul li .text .price{
+    float: right;
+    color: #E55457;
+  }
+
+/* 豆品结束 */
+/* 同城开始 */
+.city-area .city-left .title a{
+color: #f38c00;
+}
+.city-area .city-left .title a:hover{
+    color: #fff;
+    }
+ .city-area .city-left .city-left-list a{
+     color: #666;
+ }
+ .city-area .city-left .city-left-list a:hover{
+    color: #fff;
+}
+.city-area .city-right .city-right-list li{
+display: inline-block;
+font-size: 12px;
+margin-left: 10px;
+
+} 
+.city-area .city-right .city-right-list li a{
+    color: #643;
+}
+.city-area .city-right .city-right-list li a:hover {
+    color:#fff;
+}
+.city-area .city-right .city-name a{
+    font-size: 14px;
+   color:  #333;
+}
+.city-area .city-right .city-name a:hover{
+    color: #fff;
+}
+.city-area .city-right .city-name a::after{
+    display: inline;
+    content: ">>";
+    font-size: 14px;
+}
+.city-area .city-center li{
+    width: 248px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.city-area .city-center li:nth-child(2n){
+    margin-right: 0;
+}
+.city-area .city-center li .img{
+   float: left;
+   margin-right: 10px;
+}
+.city-area .city-center li img{
+    display: block;
+    width: 100%;
+}
+.city-area .city-center li .words{
+    font-size: 12px;
+    line-height: 1.62;
+
+}
+.city-area .city-center li .words span{
+    /* 解决文字溢出变圆点的问题 */
+    display: block;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+}
+/* 同城结束 */
+/* 页脚 */
+.footer .container{
+    border-top:1px dashed #dcdcdc;
+    font-size: 12px;
+}
+.footer .footer-left{
+    color: #999;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+.footer .footer-left img{
+    width: 15px;
+    vertical-align: middle;
+}
+.footer .footer-left,.footer .float-right{
+    /* 宽度各占一半 */
+    width: 50%;
+}
+.footer .float-right{
+    margin-top: 10px;
+}
+.footer .float-right .menu a{
+    margin-right: 6px;
+}
+.footer .float-right .img{
+    margin-top: 20px;
+}
+.footer .float-right .img img{
+    /* 解决半边 */
+    display: block;
+
+}

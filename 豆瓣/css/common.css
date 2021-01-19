@@ -1,0 +1,177 @@
+/* 多页面共享的css代码*/
+body{
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+/* 首页通用样式 */
+.container{
+    /* 目的让盒子居中 */
+    width: 960px;
+    margin: 0 auto;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+a{
+    color: #37a;;
+}
+a:hover{
+    background: #37a;
+    color: #fff;
+}
+a:active{
+    color: #fff;
+    background: #f93;
+}
+/* 解决全是英文不换行问题 */
+ul{
+    word-break: break-all;
+}
+/* 左侧标题 豆瓣时间 电影 小组等 */
+.aside-left .title{
+    font-size: 24px;
+    /* 此处不可写颜色 */
+}
+/* 豆瓣时间颜色 */
+.color{
+    color: #494949;
+}
+/* 登录按钮 */
+.btn{
+background: #41ac52;
+cursor: pointer;
+color: #fff;
+text-align: center;
+border-radius: 4px;
+width: 100%;
+ height: 34px;
+    font-size: 15px;
+}
+.btn:disabled{
+    cursor: auto;
+    background:  #41ac52;
+    opacity: 0.5;
+}
+/* 统一样式 0*/
+.section{
+    padding: 35px 0;
+}
+/* 有相同的 */
+.ad img{
+    width: 100%;
+    /* 消除白边 */
+    display: block;
+}
+/* 热门话题 */
+.section-title {
+    margin: 12px 0;
+}
+.section-title .title{
+    display: inline-block;
+    color: #072;
+    font-size:15px;
+}
+.section-title .title::after{
+    content: ". . . . . .";
+}
+.section-title .link{
+    font-size: 12px;
+    color: #669;
+}
+.section-title .link::before{
+    content: "(";
+}
+.section-title .link::after{
+    content: ")";
+}
+/* 必须是子元素 偶数  odd奇数 */
+/* 选中第几个子元素 */
+.section:nth-child(even){
+    background: #f7f7f7;
+    }
+    .section .container{
+        width: 950px;
+        margin:0 auto;
+    }
+    .section .container .aside-left{
+        width: 100px;
+        margin-right: 20px;
+    }
+    .section .container .aside-right{
+        width: 260px;
+        margin-left: 30px;
+    }
+    /* 后期有相同的会用到 */
+.mian{
+    /* 创建BFC  常规流盒子排列会避开浮动盒子 */
+    overflow: hidden;
+}
+/* 统一样式1 */
+/* 评分 */
+.star .start{
+    width:55px;
+    height: 11px;
+    display: inline-block;
+    background: url(../img/star-bg.png) no-repeat left top/100%;
+    margin-right: 4px;
+}
+.star .number{
+    color: #e09015;
+}
+.star .start.star50{
+    background-position: 0 0;
+}
+.star .start.star45{
+    background-position:0 -11px;
+}
+.star .start.star40{
+    background-position:0 -22px;
+}
+.star .start.star35{
+    background-position:0 -33px;
+}
+.star .start.star30{
+    background-position:0 -44px;
+}
+.star .start.star25{
+    background-position:0 -55px;
+}
+.star .start.star20{
+    background-position:0 -66px;
+}
+.star .start.star15{
+    background-position:0 -77px;
+}
+.star .start.star10{
+    background-position:0 -88px;
+}
+.star .start.star05{
+    background-position:0 -99px;
+}
+.star .start.star00{
+    background-position:0 -100px;
+}
+/*选片/书按钮 */
+.block-link{
+/* 通过设置padding来增减宽高 */
+padding: 2px 10px;
+display: inline-block;
+background: #37a;
+border-radius: 2px;
+margin-top: 2px;
+overflow: hidden;
+}
+.block-link:hover{
+    background: #1c8bd0;
+    overflow: hidden;
+}
+.block-link a{
+    color: #fff;
+}

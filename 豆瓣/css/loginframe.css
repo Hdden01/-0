@@ -1,0 +1,250 @@
+@import "reset.css";
+@import "common.css";
+@import "https://at.alicdn.com/t/font_1994372_5dqq39e3sur.css";
+.container1{
+    height: 300px;
+    width: 300px;
+    line-height: 2;
+    /* 设置margin和padding都可 */
+    /* padding:30px 10px 10px 10px; */
+    /* margin: 10px;
+    margin-top: 30px; */
+    /* 此处只可设置padiing因为放到别的网页  margin计算在宽高中 */
+    padding:30px 10px 10px 10px;  
+   color:#9b9b9b;
+   position: relative;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+/*统一设置 */
+a{
+    color: #41ac52;
+}
+input[type="text"],input[type="password"]{
+    width: 100%;
+    border:  1px solid #e4e6e5;
+    box-sizing: border-box;
+    height: 34px;
+    text-indent: 100px;
+}
+/* 更多的缩进 手机号   特殊性低于 input[type="text"],input[type="password"]*/
+input[type="text"].more-text-indent{
+    text-indent: 70px;
+} 
+.container1 .login .switch-menu{
+    border-bottom: 1px solid #ececec;
+    font-size: 13px;
+}
+/* 因为都是撑满的，所以设置每个宽度为150px */
+.container1 .login .switch-menu span{
+    width: 140px;
+    text-align: center;
+    /* 因为为行盒不可设置宽高所以设置浮动 */
+    /* 要解决高度坍塌 此处都调用公用样式里面的 */
+    cursor: pointer;
+}
+.select{
+   font-weight: bold;
+   border-bottom: 1px solid #494949;
+   /* 为了覆盖掉之前的边框 */
+   margin-bottom: -1px;
+}
+.container1 .login .form .form-item{
+    margin: 10px 0;
+    position: relative;
+    font-size: 13px
+}
+.container1 .login .form .form-item text{
+    font-size: 12px;
+}
+.container1 .login .form .form-item .country-code{
+    position: absolute;
+    width: 61px;
+    /* 解决边框撑满盒子 */
+    height:26px;
+    left:0;
+  /* 解决边框撑满盒子 */
+    top: 4px;
+    text-align: center;
+    border-right: 1px solid #e4e6e5;
+    line-height:26px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container1 .login .form .form-item .country-code .codes{
+    /* 铺满整个视口，背景图为半透明的白色 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 255, 255, 0.5);
+    border: 1px solid #9b9b9b;
+    /* 因为.form-item的验证码是相对定位，并且固定定位出现在后面 */
+    z-index: 1;
+    display: none;
+}
+.container1 .login .form .form-item .country-code .codes .center{
+    width: 285px;
+    height: 225px;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+    /* 因为父元素内设置了鼠标样式 所以此处清空 */
+    cursor: auto;
+    overflow: hidden;
+    background: #fff;
+}
+/* 手机号标题 */
+.container1 .login .form .form-item .country-code .codes .center .title{
+background: #ebf5eb;
+height: 42px;
+line-height: 42px;
+text-align: left;
+color: #060;
+padding:0 40px 0 4px;
+position: relative;
+}
+/* 关闭按钮 */
+.container1 .login .form .form-item .country-code .codes .center .title .btn1{
+    position: absolute;
+    top: 2px;
+    right: 20px;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel{
+    font-size: 14px;
+    padding:15px;
+    /* 223(因为上下边框各占1px)-42=181*/
+    height: 180px;
+    /* 必须高度固定  超出高度出现滚动条 */
+    overflow: auto;
+    box-sizing: border-box;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel li{
+border-top:1px solid #e5e5e5;
+height: 38px;
+line-height: 38px;
+cursor: pointer;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel li:last-child{
+   border-bottom: 1px solid #e5e5e5;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel li .float-right{
+    color: #aaa;
+    font-weight: normal;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel li.colorFont{
+    color: #41ac52;
+}
+.container1 .login .form .form-item .country-code .codes .center .tel li .float-right{
+    color: inherit;
+}
+.container1 .form-item .ab-right{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+}
+/* .container1 .login .form .form-item .btn{
+    
+} */
+.container1 .login .form .form-item .tip{
+    font-size: 12px;
+    color: #333;
+}
+.container1 .login .form .form-item .tip .pwd{
+    margin: 10px 0;
+}
+.container1 .login .form .form-item  .more-tel-indent{
+    text-indent: 10px;
+}
+/* 其它登录方式 */
+.container1 .login .bottom{
+    border-top: 1px solid #ddd;
+}
+.container1 .login .bottom .msg{
+    font-size: 11px;
+    /* 设置图标和文字居中 */
+    vertical-align: middle;
+}
+.container1 .login .bottom .iconfont{
+    margin-left: 12px;
+    color: #34950e;
+}
+.container1 .login .bottom .iconfont.iconweibo{
+    color: #ea5d5c;
+}
+/* 二维码登录 */
+.container1 .qrcode{
+    font-size: 13px;
+}
+.container1 .qrcode .code{
+    text-align: center;
+}
+.container1 .qrcode .code img{
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    /* 清除白边 */
+    font-size: 0;
+    /* margin: 20px 0; 因为地下要设置上外边距  若都设置外边距合并*/
+    margin-top: 20px;
+}
+.container1 .qrcode .title{
+    color: #333;
+    border-bottom:1px solid #ececec;
+}
+.container1 .qrcode .tip{
+    width: 183px;
+    height: 25px;
+    line-height: 25px;
+    background: rgba(0, 0, 0, .08);
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+.container1 .change{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.container1 .change .icon{
+    display:block;
+    width: 30px;
+    height: 30px;
+}
+/* 通过类型切换图标 */
+.container1 .change .icon.icon-qrcode{
+    background: url(../img/icon-qrcode.png) no-repeat left top/100% 100%;
+}
+.container1 .change .icon.icon-cp{
+    background: url(../img/icon-qr-small.png) no-repeat left top/100% 100%;
+}
+/* 当鼠标放上去时找到下一个兄弟元素设置为 */
+.container1 .change:hover+.pointer{
+display: block;
+}
+.container1 .pointer{
+    position: absolute;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid rgba(66, 189, 86, .3);
+    color: #666;
+    font-size: 13px;
+    background: #f5faf9;
+    right: 50px;
+    top: 4px;
+    padding: 0 5px;
+    border-radius: 4px;
+    display: none;
+}
